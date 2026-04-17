@@ -1,0 +1,299 @@
+% Pandoc/Quarto template for den-paper extension
+\documentclass[
+  manuscript=article,
+  layout=publish,
+  year=2026,
+  volume=1,
+]{den}
+
+% DOI
+
+% Conference (for proceedings/poster)
+
+% Dates
+\published{20 May 2026}
+
+% Editor and reviewers
+
+% Strip abstract fields from bibliography entries (prevents LuaLaTeX parsing issues)
+
+% Title
+\title{User Guide for the DEN Paper Template}
+
+% Authors and affiliations
+\author{First Author \orcid{0000-0000-0000-0000}}
+\affiliation{Institution-1, City, Country}
+\email{correspondence@email.domain}
+\author{Krisna Gupta \orcid{0000-0001-8695-8514}}
+\affiliation{Institution-2, City, Country}
+\author{Third Author}
+\affiliation{Institution-3, City, Country}
+
+% Keywords
+\keywords{keyword; keyword-two; keyword number three}
+
+% JEL classification codes
+\jel{C22, O47}
+
+% Abbreviations
+
+% Pandoc/Quarto compatibility macros
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\citeproc}[2]{#1}
+\providecommand{\citeproctext}{}
+
+% Support for graphics
+\RequirePackage{graphicx}
+
+% Support for ding symbols (checkmarks, etc.)
+\RequirePackage{pifont}
+
+% Support for table column width calculations (required by Quarto-generated tables)
+\RequirePackage{calc}
+
+% Pandoc image handling - required for newer Pandoc/Quarto versions
+% Constrains images to text width to prevent overflow
+\makeatletter
+\providecommand{\pandocbounded}[1]{%
+  \sbox0{#1}%
+  \ifdim\wd0>\linewidth
+    \resizebox{\linewidth}{!}{#1}%
+  \else
+    #1%
+  \fi
+}
+\makeatother
+
+% CSL references support
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\makeatletter
+\newcommand{\CSLNoBibLabel}{\renewcommand{\@biblabel}[1]{}}
+\makeatother
+\newenvironment{CSLReferences}[2]
+ {\begin{list}{}%
+  {\setlength{\leftmargin}{0pt}
+   \setlength{\itemindent}{0pt}
+   \setlength{\itemsep}{#2\baselineskip}
+   \setlength{\parsep}{0pt}
+   \setlength{\topsep}{0pt}
+   \setlength{\partopsep}{0pt}
+   \ifodd #1
+     \setlength{\leftmargin}{\cslhangindent}
+     \setlength{\itemindent}{-\cslhangindent}
+   \fi}
+  \CSLNoBibLabel}
+ {\end{list}}
+
+% Header includes
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Daftar Isi}
+\else
+  \newcommand\contentsname{Daftar Isi}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Daftar Gambar}
+\else
+  \newcommand\listfigurename{Daftar Gambar}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Daftar Tabel}
+\else
+  \newcommand\listtablename{Daftar Tabel}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Gambar}
+\else
+  \newcommand\figurename{Gambar}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabel}
+\else
+  \newcommand\tablename{Tabel}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Daftar}
+\newcommand*\listoflistings{\listof{codelisting}{Daftar Daftar}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+% Keep internal links clickable without PDF border underlines.
+\hypersetup{pdfborder={0 0 0}}
+
+% Source note environment for figure attributions (right-aligned, compact)
+\newenvironment{source}{%
+  \vspace{-1em}%
+  \begin{flushright}\scriptsize\itshape
+}{%
+  \end{flushright}%
+}
+\newcommand{\sumber}[1]{%
+  \vspace{-1em}%
+  \begin{flushright}\scriptsize\itshape
+  Sumber: #1
+  \end{flushright}%
+}
+
+% Allow LaTeX more flexibility in line breaking to prevent overflow
+% (needed for Indonesian/non-English text on narrow B5 paper)
+\tolerance=1000
+\emergencystretch=1.5em
+
+\begin{document}
+
+\begin{abstract}
+An abstract summarizes, in one paragraph of 300 words or fewer, the
+major aspects of the entire paper. It should include: 1) the overall
+purpose of the study and the research problem you investigated; 2) the
+basic design of your research approach; 3) major findings as a result of
+your analysis; and 4) a brief summary of your interpretations and
+conclusions.
+\end{abstract}
+
+\section{User Guide for This
+Template}\label{user-guide-for-this-template}
+
+Use this template with Quarto markdown (qmd). For more information on
+Quarto, visit \url{https://quarto.org}
+\href{https://quarto.org/docs/authoring/markdown-basics.html\#footnotes}{here}.
+
+\subsection{Title}\label{title}
+
+The title should be in Title Case. Keep it concise and informative,
+ideally within 12 words. Avoid abbreviations in the title unless they
+are widely recognized.
+
+\subsection{References}\label{references}
+
+Add your bibliography entries to \texttt{ref.bib} and cite them using
+standard Quarto citation syntax. Here is an example citation on diamond
+open access (Fuchs dan Sandoval 2013). According to Fuchs dan Sandoval
+(2013), diamond open access model is amazing.
+
+\subsection{Footnotes}\label{footnotes}
+
+Use footnotes sparingly. They should be used for additional information
+that is not essential to the main text.\footnote{This is an example
+  footnote.}
+
+\subsection{Tables}\label{tables}
+
+Use standard markdown tables or Quarto's table syntax.
+Tabel~\ref{tbl-example} shows an example.
+
+\begin{longtable}[]{@{}lll@{}}
+\caption{Example table}\label{tbl-example}\tabularnewline
+\toprule\noalign{}
+\textbf{Parameter} & \textbf{Notation} & \textbf{Remarks} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\textbf{Parameter} & \textbf{Notation} & \textbf{Remarks} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+name & - & engine common identifier \\
+manufacture & - & name of the manufacturer \\
+bpr & \(\lambda\) & bypass ratio \\
+pr & - & pressure ratio \\
+thrust & \(T_0\) & maximum static thrust \\
+\end{longtable}
+
+\subsection{Figures}\label{figures}
+
+Use standard Quarto figure syntax with
+\texttt{!{[}caption{]}(path)\{\#fig-id\ width=X\%\}}. Place images in a
+\texttt{fig/} folder.
+
+\subsection{Equations}\label{equations}
+
+Use standard LaTeX equation syntax. Persamaan~\ref{eq-cauchy} shows an
+example equation.
+
+\begin{equation}\protect\phantomsection\label{eq-cauchy}{
+\rho\frac{\mathrm{D} \mathbf{u}}{\mathrm{D} t} = - \nabla p + \nabla \cdot \boldsymbol \tau + \rho\,\mathbf{g}
+}\end{equation}
+
+\section{Sections}\label{sections}
+
+Organize your paper using standard markdown headings.
+
+Some standard sections are:
+
+\begin{itemize}
+\tightlist
+\item
+  Introduction
+\item
+  Methods
+\item
+  Results
+\item
+  Discussion
+\item
+  Conclusion
+\end{itemize}
+
+\section*{Acknowledgement}\label{acknowledgement}
+\addcontentsline{toc}{section}{Acknowledgement}
+
+Include your acknowledgements in this section.
+
+\section*{Funding Statement}\label{funding-statement}
+\addcontentsline{toc}{section}{Funding Statement}
+
+When applicable, please specify the funding information for this
+research.
+
+\section*{Reproducibility Statement}\label{reproducibility-statement}
+\addcontentsline{toc}{section}{Reproducibility Statement}
+
+\textbf{Mandatory section!}
+
+\subsection{Information on how to reproduce this research, including
+access to: 1) source code related to the research, 2) source code for
+the figures, 3) source code/data for the tables when
+applicable.}\label{information-on-how-to-reproduce-this-research-including-access-to-1-source-code-related-to-the-research-2-source-code-for-the-figures-3-source-codedata-for-the-tables-when-applicable.}
+
+\section{Pendahuluan}\label{pendahuluan}
+
+\section{Studi Literatur}\label{studi-literatur}
+
+xxxx
+
+\section{Metodologi}\label{metodologi}
+
+\subsection{Data}\label{data}
+
+\subsection{Metode}\label{metode}
+
+\section*{Analisis}\label{analisis}
+\addcontentsline{toc}{section}{Analisis}
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{1}{1}
+\bibitem[\citeproctext]{ref-fuchs2013diamond}
+Fuchs, Christian, dan Marisol Sandoval. 2013. {``The diamond model of
+open access publishing: Why policy makers, scholars, universities,
+libraries, labour unions and the publishing world need to take
+non-commercial, non-profit open access serious.''} \emph{TripleC:
+Communication, capitalism \& critique} 11 (2): 428--443.
+
+\end{CSLReferences}
+
+\end{document}
