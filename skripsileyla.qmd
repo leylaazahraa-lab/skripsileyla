@@ -11,7 +11,7 @@ published: "20 May 2026"
 
 # Authors
 author:
-  - name: "First Author"
+  - name: "First Author" # Leyla update dong namanya
     orcid: "0000-0000-0000-0000"
     affiliations:
       - name: "Institution-1, City, Country"
@@ -20,7 +20,7 @@ author:
   - name: Krisna Gupta
     orcid: 0000-0001-8695-8514
     affiliations:
-      - name: "Institution-2, City, Country"
+      - name: "Dewan Ekonomi Nasional"
   - name: "Third Author"
     affiliations:
       - name: "Institution-3, City, Country"
@@ -46,7 +46,7 @@ abstract: |
 
 # Bibliography file
 lang: id
-bibliography: ref.bib
+bibliography: skripsi.bib
 csl: csl.csl
 citation: true
 crossref: # turn off if you write in english
@@ -57,13 +57,37 @@ crossref: # turn off if you write in english
   eq-prefix: Persamaan
 ---
 
-# User Guide for This Template
+# Pendahuluan
 
-Use this template with Quarto markdown (qmd). For more information on Quarto, visit <https://quarto.org> [here](https://quarto.org/docs/authoring/markdown-basics.html#footnotes).
+<!-- bikin pendahuluan di sini ley -->
 
-## Title
+# Studi Literatur
 
-The title should be in Title Case. Keep it concise and informative, ideally within 12 words. Avoid abbreviations in the title unless they are widely recognized.
+<!-- kamu tulis di sini semua literatur. Wajib dicite adalah Manova, Sparrow & Kis-Katos. Cite  -->
+
+<!-- part pertama discuss soal dampak trade ke income dan inequality. Intinya dampaknya positif tapi bervariasi.  cite topalova dan kiskatos sparrow -->
+
+Secara umum, model standar perdagangan internasional memprediksi peningkatan kesejahteraan bagi masyarakat [@kom]. Namun demikian, dampak positif tersebut terbagi dengan tidak merata [@autor; @topalova; @ks].
+
+<!-- part kedua soal bedanya IMK dan IBS pake papaer2 yg kamu pake -->
+
+<!-- part ketiga soal metodologi yg dipake orang2 ini. fokus aja ke Bartik Instrument dan gimana informality diitung -->
+
+# Metodologi
+
+## Data
+
+<!-- di sini kamu bikin summary stat dan bahas isi data -->
+
+## Metode
+
+<!-- di sini kamu bahas method yg mau kita pake -->
+
+# Hasil
+
+# Kesimpulan
+
+# Referensi
 
 ## References
 
