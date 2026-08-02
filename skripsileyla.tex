@@ -25,7 +25,7 @@
 \affiliation{Institution-1, City, Country}
 \email{correspondence@email.domain}
 \author{Krisna Gupta \orcid{0000-0001-8695-8514}}
-\affiliation{Institution-2, City, Country}
+\affiliation{Dewan Ekonomi Nasional}
 \author{Third Author}
 \affiliation{Institution-3, City, Country}
 
@@ -66,27 +66,6 @@
 \makeatother
 
 % CSL references support
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\makeatletter
-\newcommand{\CSLNoBibLabel}{\renewcommand{\@biblabel}[1]{}}
-\makeatother
-\newenvironment{CSLReferences}[2]
- {\begin{list}{}%
-  {\setlength{\leftmargin}{0pt}
-   \setlength{\itemindent}{0pt}
-   \setlength{\itemsep}{#2\baselineskip}
-   \setlength{\parsep}{0pt}
-   \setlength{\topsep}{0pt}
-   \setlength{\partopsep}{0pt}
-   \ifodd #1
-     \setlength{\leftmargin}{\cslhangindent}
-     \setlength{\itemindent}{-\cslhangindent}
-   \fi}
-  \CSLNoBibLabel}
- {\end{list}}
 
 % Header includes
 \makeatletter
@@ -164,25 +143,410 @@ your analysis; and 4) a brief summary of your interpretations and
 conclusions.
 \end{abstract}
 
-\section{User Guide for This
-Template}\label{user-guide-for-this-template}
+\section{Pendahuluan}\label{pendahuluan}
 
-Use this template with Quarto markdown (qmd). For more information on
-Quarto, visit \url{https://quarto.org}
-\href{https://quarto.org/docs/authoring/markdown-basics.html\#footnotes}{here}.
+\section{Studi Literatur}\label{studi-literatur}
 
-\subsection{Title}\label{title}
+Trade liberalization and welfare has been the subject of a number of
+empirical research. Standard trade models predict aggregate welfare
+gains from the removal of trade barriers, where liberalization allows
+economies to specialise according to comparative advantage and open
+consumers to access of more varied goods (Krugman, Obstfeld and Melitz,
+2022). These aggregate predictions, however, say little about how the
+gains are distributed, and the empirical literature has increasingly
+turned to that question.
 
-The title should be in Title Case. Keep it concise and informative,
-ideally within 12 words. Avoid abbreviations in the title unless they
-are widely recognized.
+Much of the recent evidence shows that the direction of the effect
+depends on which tariffs are cut. Kis-Katos and Sparrow (2015) combine
+the annual manufacturing survey (Survei Industri or IBS) with Sakernas
+for the period 1993 to 2002 and estimate effects at both the provincial
+and the district level in Indonesia. Both levels of analysis indicate
+that average wages rose in response to reductions in tariffs on
+intermediate inputs. The two tariff types also move poverty in opposite
+directions, since lower output tariffs are associated with higher
+poverty across the poverty measures while lower input tariffs are
+associated with poverty reduction.
+
+Amiti and Konings (2007) find that a 10 percentage point fall in input
+tariffs raises productivity by about 12 percent for firms that import
+their inputs, at least twice the gain from an equivalent cut in output
+tariffs. To be precise, importers receive this full benefit while
+non-importers receive only about 3 percent, so the gains from input
+liberalization are concentrated among a subset of firms rather than
+shared evenly across the sector.
+
+Evidence from Brazil points to a further source of heterogeneity, this
+time across labour market segments rather than across firms. Paz (2014)
+finds that the gains accrued disproportionately to formal employment. A
+one percentage point reduction in the tariffs applied by trading
+partners to Brazilian exports raised formal-sector wages by roughly 0.32
+percent, whereas a one percentage point reduction in Brazil's own import
+tariffs lowered formal wages by about 0.05 percent. Lower partner
+tariffs also reduced the probability that a worker was employed
+informally.
+
+The evidence is not uniformly positive. Delesalle et al.~(2025) find no
+significant average effect of the ASEAN-China Free Trade Area on the
+probability of holding a wage job in Indonesia. The estimated overall
+effect is economically very small or statistically insignificant for
+men, for women, and for less-educated workers. It is larger and
+statistically significant only for educated workers, for whom the
+average increase is 1.9 percentage points against a baseline probability
+of 17.4 percent in 2000. Since this group accounts for around a quarter
+of the workforce, the distributional incidence of the agreement was
+regressive. Topalova (2007) reports a sharper result for India, where a
+district exposed to the average tariff reduction recorded a poverty
+headcount roughly two percentage points higher and a poverty gap roughly
+0.6 percentage points higher than a district whose tariffs were
+unchanged.
+
+Whether such adverse effects materialise appears to depend on the
+institutional setting. Goldberg and Pavcnik (2003) find that Colombian
+tariff reductions raised informal employment by roughly 0.1 percentage
+points per percentage point of tariff cut, but only before Law 50 of
+1990 reduced firing costs. Post-reform, the interaction between tariffs
+and informal employment is consistently positive, indicating that the
+same tariff decline leads to a smaller increase in informality
+afterwards, and possibly a decrease. These results indicate that trade
+policy moves informality only when formal employment is costly to
+adjust.
+
+Goldberg and Pavcnik (2007) find that globalization increases the wage
+skill premium in developing countries at the economy-wide level, within
+industries, and within firms. Amiti and Cameron (2012), however, report
+the opposite for Indonesian manufacturing. Using firm-level data with
+firm and year by island fixed effects, they find that a 10 percentage
+point reduction in input tariffs lowered the within-firm skill premium
+by about 1.4 to 2.6 percent, while output tariffs had no significant
+effect once input tariffs were controlled for. The effect is
+concentrated among firms that actually import intermediates.
+
+In analysing the effects of trade liberalization on poverty and labour
+market outcomes, Kis-Katos and Sparrow (2015) construct district-level
+tariff exposure by combining nationally determined sectoral import
+tariffs with each district's initial economic structure prior to trade
+liberalization. This approach follows a \textbf{shift-share (Bartik)
+framework}, in which national tariff changes are weighted by
+predetermined district-level employment or industrial output shares.
+
+For the poverty analysis, district output tariff exposure is measured
+using the initial employment distribution across sectors. Specifically,
+the tariff exposure of district \(k\) in year \(t\) is defined as
+
+\[
+Tariff_{kt}
+=
+\sum_{s=1}^{S}
+\left(
+\frac{Q_{sk,1990}}{Q_{k,1990}}
+\times
+Tariff_{st}
+\right),
+\]
+
+where:
+
+\begin{itemize}
+\tightlist
+\item
+  \(Q_{sk,1990}\) denotes employment in output sector \(s\) in district
+  \(k\) in 1990.
+\item
+  \(Q_{k,1990}\) is the total labour force in district \(k\) in 1990.
+\item
+  \(Tariff_{st}\) is the national import tariff applied to sector \(s\)
+  in year \(t\).
+\item
+  \(S\) denotes the total number of tradable sectors.
+\end{itemize}
+
+For the firm-level analysis, Kis-Katos and Sparrow (2015) alternatively
+construct an output tariff measure using the initial industrial
+structure of each district. In this case, sectoral tariffs are weighted
+by each sector's share in the district's total industrial output in
+1993, \(\left(\frac{Q_{sk,1993}}{Q_{k,1993}}\right)\), rather than by
+employment shares.
+
+To capture the effects of tariffs on intermediate inputs, the authors
+also construct an input tariff measure. The input tariff for each
+industry is first calculated as the weighted average tariff on all
+imported intermediate inputs, where the weights are given by each
+input's share in the industry's total input use. These industry-specific
+input tariffs are then aggregated to the district level using the
+district's initial employment shares:
+
+\[
+InputTariff_{kt}
+=
+\sum_{s=1}^{S}
+\left(
+\frac{Q_{sk,1990}}{Q_{k,1990}}
+\times
+\sum_{j=1}^{J}
+\left(
+\frac{M_{js,1990}}{M_{s,1990}}
+\times
+Tariff_{jt}
+\right)
+\right).
+\]
+
+where:
+
+\begin{itemize}
+\tightlist
+\item
+  \(M_{js,1990}\) denotes the value of intermediate input \(j\) used by
+  industry \(s\) in 1990.
+\item
+  \(M_{s,1990}\) is the total value of intermediate inputs used by
+  industry \(s\) in 1990.
+\item
+  \(\frac{M_{js,1990}}{M_{s,1990}}\) represents the share of input \(j\)
+  in the total intermediate inputs of industry \(s\).
+\item
+  \(Tariff_{jt}\) denotes the national tariff on intermediate input
+  \(j\) in year \(t\).
+\item
+  \(J\) represents the total number of input sectors.
+\end{itemize}
+
+Consistent with Kovak (2013), Kis-Katos and Sparrow (2015) exclude
+non-tradable sectors from the construction of the output tariff measure
+because these sectors are not directly exposed to international trade.
+
+The effects of trade liberalization on poverty and labour market
+outcomes are then estimated using the following first-difference
+specification:
+
+\[
+\Delta y_{kt}
+=
+\alpha
++
+\beta_1
+\Delta OutputTariff_{kt}
++
+\beta_2
+\Delta InputTariff_{kt}
++
+\Delta X_{kt}^{\prime}\gamma
++
+I_k^{\prime}\theta
++
+\lambda_{rt}
++
+\Delta\varepsilon_{kt},
+\]
+
+where:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\Delta y_{kt}\) denotes the change in the district-level outcome
+  variable, including measures of poverty, employment, and wages.
+\item
+  \(\Delta OutputTariff_{kt}\) represents the change in district-level
+  output tariff exposure.
+\item
+  \(\Delta InputTariff_{kt}\) represents the change in district-level
+  input tariff exposure.
+\item
+  \(\Delta X_{kt}\) is a vector of time-varying control variables,
+  including the share of the rural population, the share of the
+  working-age population (16--60 years), adult literacy rates, and
+  minimum wages.
+\item
+  \(I_k\) is a vector of initial district characteristics, including the
+  1990 labour shares used as tariff weights, aggregated to one-digit
+  sectors, the 1990 rural population share, and, in some specifications,
+  the initial level of the dependent variable.
+\item
+  \(\lambda_{rt}\) denotes island-by-year fixed effects.
+\item
+  \(\Delta\varepsilon_{kt}\) is the error term.
+\end{itemize}
+
+The first-difference specification removes time-invariant district
+characteristics and exploits within-district variation in tariff
+exposure over time. By combining predetermined employment shares with
+nationally determined tariff changes, the Bartik framework identifies
+heterogeneous district exposure to trade liberalization while reducing
+concerns regarding reverse causality.
+
+Unlike Kis-Katos and Sparrow (2015), who estimate the model using a
+first-difference OLS specification, Delesalle et al.~(2025) employ a
+Bartik instrumental variable (IV)strategy to address the potential
+endogeneity of tariff reductions. District-level exposure to trade
+liberalization depends on both the pre-liberalization industrial
+structure and industry-level tariff changes. Rather than examining
+multilateral trade liberalization, the authors focus exclusively on the
+bilateral tariff reductions between Indonesia and China under the
+ASEAN--China Free Trade Agreement (ACFTA), using pre-ACFTA industry
+shares to construct the exposure measures. Specifically, they consider
+three channels through which trade liberalization may affect local labor
+markets: output import tariff cuts, input import tariff cuts, and export
+tariff cuts.
+
+The output import tariff measure is constructed as
+
+\[
+\Delta OutputImportTariff_{d,2000-2010}
+=
+\sum_{s}
+\frac{L_{s,d,2000}}{L_{d,2000}}
+\cdot
+\Delta Tariff^{Indo}_{s,2000-2010}
+\]
+
+where:
+
+\begin{itemize}
+\tightlist
+\item
+  \(L_{s,d,2000}\) is the number of working-age individuals employed in
+  industry \(s\) in district \(d\) in 2000.
+\item
+  \(L_{d,2000}\) is the total working-age population employed in
+  district \(d\) in 2000.
+\item
+  \(\Delta Tariff^{Indo}_{s,2000-2010}\) denotes the change in
+  Indonesia's import tariff on Chinese products in industry \(s\)
+  between 2000 and 2010.
+\end{itemize}
+
+To capture the effect of imported intermediate inputs, the authors
+construct the input import tariff measure:
+
+\[
+\Delta InputImportTariff_{d,2000-2010}
+=
+\sum_{s}
+\frac{L_{s,d,2000}}{L_{d,2000}}
+\left(
+\sum_{j}
+\frac{M_{j,s,2000}}{M_{s,2000}}
+\cdot
+\Delta Tariff^{Indo}_{j,2000-2010}
+\right)
+\]
+
+where:
+
+\begin{itemize}
+\tightlist
+\item
+  \(M_{j,s,2000}\) denotes the value of intermediate input \(j\) used by
+  industry \(s\).
+\item
+  \(M_{s,2000}\) is the total intermediate inputs used by industry
+  \(s\).
+\item
+  \(\frac{M_{j,s,2000}}{M_{s,2000}}\) represents the cost share of input
+  \(j\) in industry \(s\).
+\item
+  The inner summation calculates the industry-level input tariff, while
+  the outer summation aggregates these tariffs to the district level
+  using initial employment shares.
+\end{itemize}
+
+The export tariff measure follows the same specification as the output
+import tariff but replaces Indonesian import tariffs with Chinese
+tariffs imposed on Indonesian exports:
+
+\[
+\Delta ExportTariff_{d,2000-2010}
+=
+\sum_{s}
+\frac{L_{s,d,2000}}{L_{d,2000}}
+\cdot
+\Delta Tariff^{China}_{s,2000-2010}
+\]
+
+where \(\Delta Tariff^{China}_{s,2000-2010}\) denotes the change in
+Chinese import tariffs on Indonesian exports in industry \(s\).
+
+The relationship between tariff exposure and labor market outcomes is
+estimated using the following empirical specification:
+
+\[
+\Delta y_{d,2000-2010}
+=
+\alpha
++
+\beta_1
+\Delta OutputImportTariff_{d}
++
+\beta_2
+\Delta InputImportTariff_{d}
++
+\beta_3
+\Delta ExportTariff_{d}
++
+\gamma X_{d,2000}
++
+\varepsilon_d
+\]
+
+where:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\Delta y_{d,2000-2010}\) denotes the change in the district-level
+  labor market outcome between 2000 and 2010.
+\item
+  \(\Delta OutputImportTariff_{d}\) is the district-level output import
+  tariff exposure.
+\item
+  \(\Delta InputImportTariff_{d}\) is the district-level input import
+  tariff exposure.
+\item
+  \(\Delta ExportTariff_{d}\) is the district-level export tariff
+  exposure.
+\item
+  \(X_{d,2000}\) is a vector of pre-liberalization district
+  characteristics, including industrial composition, education,
+  demographic variables, and island fixed effects.
+\item
+  \(\varepsilon_d\) is the error term.
+\end{itemize}
+
+To address the potential endogeneity of tariff reductions, Delesalle et
+al.~(2025) instrument district-level tariff changes using the initial
+average tariff level in 2000. The identification strategy exploits the
+design of the ACFTA, under which sectors with higher pre-liberalization
+tariffs experienced systematically larger tariff reductions between 2000
+and 2010. Consequently, the initial tariff level provides a strong
+predictor of subsequent tariff changes while remaining plausibly
+exogenous to later labor market outcomes after conditioning on
+pre-treatment characteristics.
+
+Unlike Kis-Katos and Sparrow (2015), who rely on a first-difference OLS
+specification, Delesalle et al.~(2025) estimate the causal effects using
+a Bartik IV strategy, thereby strengthening causal identification by
+mitigating potential bias arising from the non-random allocation of
+tariff reductions across industries.
+
+\section{Metodologi}\label{metodologi}
+
+\subsection{Data}\label{data}
+
+\subsection{Metode}\label{metode}
+
+\section{Hasil}\label{hasil}
+
+\section{Kesimpulan}\label{kesimpulan}
+
+\section{Referensi}\label{referensi}
 
 \subsection{References}\label{references}
 
 Add your bibliography entries to \texttt{ref.bib} and cite them using
 standard Quarto citation syntax. Here is an example citation on diamond
-open access (Fuchs dan Sandoval 2013). According to Fuchs dan Sandoval
-(2013), diamond open access model is amazing.
+open access (\textbf{fuchs2013diamond?}). According to
+(\textbf{fuchs2013diamond?}), diamond open access model is amazing.
 
 \subsection{Footnotes}\label{footnotes}
 
@@ -270,30 +634,18 @@ access to: 1) source code related to the research, 2) source code for
 the figures, 3) source code/data for the tables when
 applicable.}\label{information-on-how-to-reproduce-this-research-including-access-to-1-source-code-related-to-the-research-2-source-code-for-the-figures-3-source-codedata-for-the-tables-when-applicable.}
 
-\section{Pendahuluan}\label{pendahuluan}
+\section{Pendahuluan}\label{pendahuluan-1}
 
-\section{Studi Literatur}\label{studi-literatur}
+\section{Studi Literatur}\label{studi-literatur-1}
 
 xxxx
 
-\section{Metodologi}\label{metodologi}
+\section{Metodologi}\label{metodologi-1}
 
-\subsection{Data}\label{data}
+\subsection{Data}\label{data-1}
 
-\subsection{Metode}\label{metode}
+\subsection{Metode}\label{metode-1}
 
-\section*{Analisis}\label{analisis}
-\addcontentsline{toc}{section}{Analisis}
-
-\protect\phantomsection\label{refs}
-\begin{CSLReferences}{1}{1}
-\bibitem[\citeproctext]{ref-fuchs2013diamond}
-Fuchs, Christian, dan Marisol Sandoval. 2013. {``The diamond model of
-open access publishing: Why policy makers, scholars, universities,
-libraries, labour unions and the publishing world need to take
-non-commercial, non-profit open access serious.''} \emph{TripleC:
-Communication, capitalism \& critique} 11 (2): 428--443.
-
-\end{CSLReferences}
+\section{Analisis}\label{analisis}
 
 \end{document}
