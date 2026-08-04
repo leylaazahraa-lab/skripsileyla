@@ -60,6 +60,11 @@ crossref: # turn off if you write in english
 # Pendahuluan
 
 <!-- bikin pendahuluan di sini ley -->
+Trade liberalization has long been promoted as a pathway to economic growth. The classical theories of Ricardo and Heckscher-Ohlin predict that reducing tariff barriers allows countries to specialize in their comparative advantage, lowering consumer prices and raising aggregate output. International institutions including the World Bank, the IMF, and the WTO have consistently advocated trade openness as a pillar of development strategy, and Indonesia has followed this counsel through successive rounds of tariff reduction. From the WTO accession in 1995 to AFTA, ACFTA, RCEP, and a series of bilateral agreements, Indonesia's simple average applied tariff has fallen from approximately 15 percent in the early 1990s to roughly 2 percent by 2023 (WITS, 2024).
+
+Manufacturing needs particular attention in this context because it is the single largest contributor to GDP growth. In 2024, manufacturing industries contributed 1.07 percentage points to Indonesia's 5.11 percent GDP growth, exceeding the contributions of agriculture, trade, mining, and services (BPS, 2024).
+
+Within the manufacturing sector, the question of who benefits from trade liberalization takes on added urgency. Melitz (2003) demonstrates that trade liberalization favors large, productive, export-oriented firms, which gain access to cheaper inputs and larger markets. Small, domestic-market firms, by contrast, face the downside of increased import competition without offsetting export opportunities.
 
 # Studi Literatur
 
@@ -73,7 +78,7 @@ Much of the recent evidence shows that the direction of the effect depends on wh
 
 Amiti and Konings (2007) find that a 10 percentage point fall in input tariffs raises productivity by about 12 percent for firms that import their inputs, at least twice the gain from an equivalent cut in output tariffs. To be precise, importers receive this full benefit while non-importers receive only about 3 percent, so the gains from input liberalization are concentrated among a subset of firms rather than shared evenly across the sector.
 
-Evidence from Brazil points to a further source of heterogeneity, this time across labour market segments rather than across firms. Paz (2014) finds that the gains accrued disproportionately to formal employment. A one percentage point reduction in the tariffs applied by trading partners to Brazilian exports raised formal-sector wages by roughly 0.32 percent, whereas a one percentage point reduction in Brazil's own import tariffs lowered formal wages by about 0.05 percent. Lower partner tariffs also reduced the probability that a worker was employed informally.
+Evidence from Brazil points to a further source of heterogeneity, this time across labour market segments. Paz (2014) finds that the gains accrued disproportionately to formal employment. A one percentage point reduction in the tariffs applied by trading partners to Brazilian exports raised formal-sector wages by roughly 0.32 percent, whereas a one percentage point reduction in Brazil's own import tariffs lowered formal wages by about 0.05 percent. Lower partner tariffs also reduced the probability that a worker was employed informally.
 
 The evidence is not uniformly positive. Delesalle et al. (2025) find no significant average effect of the ASEAN-China Free Trade Area on the probability of holding a wage job in Indonesia. The estimated overall effect is economically very small or statistically insignificant for men, for women, and for less-educated workers. It is larger and statistically significant only for educated workers, for whom the average increase is 1.9 percentage points against a baseline probability of 17.4 percent in 2000. Since this group accounts for around a quarter of the workforce, the distributional incidence of the agreement was regressive. Topalova (2007) reports a sharper result for India, where a district exposed to the average tariff reduction recorded a poverty headcount roughly two percentage points higher and a poverty gap roughly 0.6 percentage points higher than a district whose tariffs were unchanged.
 
@@ -262,12 +267,50 @@ Unlike Kis-Katos and Sparrow (2015), who rely on a first-difference OLS specific
 # Metodologi
 
 ## Data
-
+### Data and Unit of Analysis
 <!-- di sini kamu bikin summary stat dan bahas isi data -->
+This study utilizes the Survei Industri Mikro dan Kecil (IMK) administered by Badan Pusat Statistik (BPS) for the period 2010 to 2024. The IMK covers manufacturing establishments with 1 to 19 workers. This distinguishes it from the Survei Industri Besar dan Sedang (IBS), which enumerates establishments with 20 or more workers). 
 
+The period 2010 to 2024 is selected to capture the effects of continued tariff reduction on micro and small manufacturing. xxxx
+
+An important measurement constraint should be noted at the outset. The IMK records workers only as paid or unpaid, and this classification does not correspond to informality as defined in the comparative literature. Goldberg and Pavcnik (2003) define informality through compliance with labour market regulation, a definition the IMK cannot support because it collects no information on contracts, social security enrolment, or regulatory registration. 
+
+Tariff data are drawn from the World Integrated Trade Solution (WITS) database maintained by the World Bank, using UNCTAD-TRAINS applied rates
+
+The unit of analysis is the IMK firms at the province-year level.
+
+### Distribution Sample
+The provincial distribution of IMK firms during the 2018–2022 period reveals substantial variation across Indonesia. West Java recorded the highest number of IMK firms in the sample, with 65 firms, indicating that the province has the greatest concentration of small manufacturing establishments among all provinces included in the dataset. 
+| **Province** | **Number of IMK Firms** |
+|:----------|--------------------:|
+| Aceh | 7 |
+| North Sumatra | 16 |
+| West Sumatra | 4 |
+| Riau | 29 |
+| Jambi | 1 |
+| Lampung | 13 |
+| Riau Islands | 5 |
+| DKI Jakarta | 23 |
+| West Java | 65 |
+| Central Java | 35 |
+| DI Yogyakarta | 18 |
+| East Java | 61 |
+| Banten | 8 |
+| Bali | 9 |
+| West Nusa Tenggara | 4 |
+| West Kalimantan | 2 |
+| Central Kalimantan | 4 |
+| East Kalimantan | 10 |
+| North Sulawesi | 10 |
+| Central Sulawesi | 1 |
+| South Sulawesi | 1 |
+| West Papua | 8 |
+| Papua | 9 |
 ## Metode
 
 <!-- di sini kamu bahas method yg mau kita pake -->
+
+
 
 # Hasil
 
